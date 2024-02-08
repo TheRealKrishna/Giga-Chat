@@ -1,0 +1,325 @@
+.blueCirclesBackground {
+    width: 100%;
+    pointer-events: none;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(".././images/blueCircles.svg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.navbar {
+    height: 8vh;
+    background: rgba(192, 248, 255, 0.31);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(178, 243, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a:has(>.title) {
+    font-family: 'ADLaM Display', cursive;
+    color: black;
+    text-decoration: none;
+    margin: 0px 75px;
+}
+
+.currentUser{
+    display: flex;
+    flex: 15;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentUser:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.currentUser > img{
+    width: 50px;
+    height: 50px;
+    object-fit:cover;
+    overflow: hidden;
+    border-radius:50%;
+}   
+
+.currentUser > span{
+    color: black;
+    font-size: bolder;
+    padding: 15px;
+}
+
+.settingsIcon{
+    display: flex;
+    flex:1;
+    font-size: large;
+    cursor: pointer;
+    color: "#000000";
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.settingsIcon:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.settingsIcon > i {
+    color:black;
+}
+
+.contactsArea {
+    height: 92vh;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    width: 20%;
+}
+
+.contactSearch{
+    display: flex;
+    padding: 5px;
+    background-color: rgba(177, 177, 177, 0.293);
+}
+
+.contacts{
+    max-height: 85vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.contacts::-webkit-scrollbar {
+    width: .5em;
+  }
+   
+.contacts::-webkit-scrollbar-thumb {
+    background-color: rgb(98, 98, 98);
+    border-radius: 5px;
+  }
+
+.contactSearchInput{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    flex: 2;
+}
+
+.contactSearchInput::placeholder{
+    color: rgba(0, 0, 0, 0.633);
+}
+
+.contactSearchButton{
+    flex:1;
+}
+
+.contactItem{
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.contactItem:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contactItemActive{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.contactItemImage{
+    width: 50px;
+    height: 50px;
+    object-fit:cover;
+    overflow: hidden;
+    border-radius:50%;
+}
+
+.contactItemName{
+    color: black;
+    font-size: bolder;
+    padding: 15px;
+}
+
+.newMessageIndicator{
+    padding: 0px 6px;
+    color: white;
+    border-radius:50%;
+    background-color: red;
+}
+
+.chatArea {
+    height: 92vh;
+    width: 80%;
+    background: rgba(27, 0, 227, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(60, 0, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+ .chat::-webkit-scrollbar {
+    width: .5em;
+  }
+   
+  .chat::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 166, 255);
+    border-radius: 5px;
+  }
+
+.leftChat{
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.incomingChat{
+    background-color: rgb(255, 255, 255);
+    min-width: 5vw;
+    max-width: 30vw;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 10px;
+    padding:10px;
+    word-wrap: break-word;
+}
+
+.rightChat{
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.outgoingChat{
+    background-color: rgb(129, 184, 255);
+    min-width: 5vw;
+    max-width: 30vw;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 10px;
+    padding:10px;
+    word-wrap: break-word;
+}
+
+.timeStamp{
+    font-size: 9px;
+    display: flex;
+    justify-content: right;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.sendMessage{
+
+}
+
+
+.sendMessageBox{
+    background-color: white;
+    padding: 5px;
+    display: flex;
+}
+
+.emojiSelectorBox{
+    margin: 55px 5px;
+    position: absolute;
+}
+
+.sendMessageEmojiSelector{
+    color: #ffc800;
+    font-size: 25px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.attachmentSelector{
+    font-size: 25px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.sendMessageInput{
+    outline: none;
+    border: none;
+    flex:5;
+}
+
+.sendMessageButton{
+    flex: 1;
+    outline: none;
+    border: none;
+}
+
+.sendMessage > i{
+    font-size: 25px;
+    margin: 0px 5px;
+    color: #005eff;
+}
+
+@media (max-width: 1100px) {
+    .contactsArea{
+        width: 30%;
+    }
+    .chatArea{
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    a:has(>.title) {
+        font-family: 'ADLaM Display', cursive;
+        color: black;
+        text-decoration: none;
+        margin: 0px 5px;
+    }
+    .contactsArea{
+        width: 100%;
+    }
+    .chatArea{
+        width: 100%;
+    }
+
+    .emojiSelectorBox{
+        
+    }
+
+    .currentUser{
+        display: flex;
+        flex: 5;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .settingsIcon{
+        display: flex;
+        flex:2;
+    }
+    @document url("/chat"){
+        .contactsArea{
+             
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .sendMessageBox{
+        overflow: hidden;
+    }
+}
