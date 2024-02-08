@@ -31,6 +31,6 @@ io.on('connection', (socket) => {
 });
 
 // server run
-server.listen(5000, () => {
-  console.log(`Server Runinng on: http://localhost:5000`)
+server.listen(80, () => {
+  console.log(`Server Runinng on: http://localhost:80`)
 })
