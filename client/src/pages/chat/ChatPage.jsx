@@ -22,6 +22,7 @@ export default function ChatPage() {
 
   useEffect(()=>{
     socket.current?.on('newMessage', () => {
+      console.log("newMessages")
       fetchUser();
       });
   },[])

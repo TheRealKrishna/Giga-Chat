@@ -14,6 +14,7 @@ export default function ChatArea(props) {
 
     useEffect(()=>{
         props.socket.current?.on('newMessage', () => {
+            console.log("newMessages")
             fetchMessages();
             props.setSearchQuery("")
           });
