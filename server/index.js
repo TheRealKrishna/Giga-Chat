@@ -17,11 +17,12 @@ const io = new socketIo.Server(server,{
 });
 
 // app routes
-app.get('/', (req, res) => {
-  res.send('Backend For GigaChad!')
-})
 app.use("/api/auth", require("./api/auth.js"))
 app.use("/api/chat", require("./api/chat.js"))
+
+app.use("/api", (req, res)=>{
+  return res.send("Backend for GigaChat...")
+})
 
 //io
 io.on('connection', (socket) => {
@@ -29,6 +30,7 @@ io.on('connection', (socket) => {
     io.emit('newMessage')
   });
 });
+
 
 // server run
 server.listen(80, () => {
