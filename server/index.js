@@ -20,7 +20,7 @@ const io = new socketIo.Server(server,{
 app.use("/api/auth", require("./api/auth.js"))
 app.use("/api/chat", require("./api/chat.js"))
 
-app.use("/api", (req, res)=>{
+app.get("/api", (req, res)=>{
   return res.send("Backend for GigaChat...")
 })
 
