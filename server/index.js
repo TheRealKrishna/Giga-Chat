@@ -17,10 +17,10 @@ const io = new socketIo.Server(server,{
 });
 
 // app routes
-app.use("/api/auth", require("./api/auth.js"))
-app.use("/api/chat", require("./api/chat.js"))
+app.use("/auth", require("./api/auth.js"))
+app.use("/chat", require("./api/chat.js"))
 
-app.get("/api", (req, res)=>{
+app.get("/", (req, res)=>{
   return res.send("Backend for GigaChat...")
 })
 

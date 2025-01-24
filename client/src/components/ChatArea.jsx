@@ -22,7 +22,7 @@ export default function ChatArea(props) {
     
 
     const fetchMessages = async () => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/getMessages`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/getMessages`, {
             method: "POST",
             headers: {
                 "auth-token": localStorage.getItem("auth-token"),
@@ -49,7 +49,7 @@ export default function ChatArea(props) {
     }
 
     const addToContact = async () => {
-        await fetch(`${process.env.REACT_APP_API_URL}/api/chat/addContact`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/chat/addContact`, {
             method: "POST",
             headers: {
                 "auth-token": localStorage.getItem("auth-token"),
@@ -67,7 +67,7 @@ export default function ChatArea(props) {
             setText("")
             addToContact();
             if (messages?.length !== 0) {
-                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/addMessage`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/addMessage`, {
                     method: "POST",
                     headers: {
                         "auth-token": localStorage.getItem("auth-token"),
@@ -79,7 +79,7 @@ export default function ChatArea(props) {
                 setMessages(json.messages)
             }
             else {
-                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/createChat`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/createChat`, {
                     method: "POST",
                     headers: {
                         "auth-token": localStorage.getItem("auth-token"),

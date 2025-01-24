@@ -21,7 +21,7 @@ export default function Login() {
 
   const onSubmit = (data) => {
     toast.promise(new Promise(async (resolve, reject) => {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
         method: "post",
         body: JSON.stringify(data),
         headers: {

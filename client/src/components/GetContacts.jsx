@@ -8,7 +8,7 @@ export default function GetContacts(props) {
     const navigate = useNavigate();
 
     const getContacts = async () => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/getContacts`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/getContacts`, {
             method: "POST",
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
@@ -20,7 +20,7 @@ export default function GetContacts(props) {
 
     const fetchContactsWithInfo = async (contactIds) => {
         const contactsPromise = contactIds.map(async (contact) => {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/getContactInfo`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/getContactInfo`, {
                 method: "POST",
                 headers: {
                     "auth-token": localStorage.getItem("auth-token"),

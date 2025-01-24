@@ -28,7 +28,7 @@ export default function ChatPage() {
   },[])
 
   const fetchUser = async()=>{
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/getUserInfo`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/getUserInfo`, {
         method: "POST",
         headers: {
             "auth-token": localStorage.getItem("auth-token"),
@@ -39,7 +39,7 @@ export default function ChatPage() {
 }
 
   const fetchCurrentUser = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/getContactInfo`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/getContactInfo`, {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("auth-token"),
@@ -56,7 +56,7 @@ export default function ChatPage() {
 
   const searchContact = async (e) => {
     setSearchQuery(prevText => e.target.value);
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/chat/searchContact`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/chat/searchContact`, {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("auth-token"),
